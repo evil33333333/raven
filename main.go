@@ -192,7 +192,7 @@ func login(username string, password string) (string, error) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if resp.StatusCode == 200 {
+	if response.StatusCode == 200 {
 		return resp.Header.Values("set-cookie")[4], nil
 	} else {
 		return "", fmt.Errorf("Could not login.")
